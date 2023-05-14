@@ -1,5 +1,7 @@
-This is web site for watching movies build with Golang, CSS, HTML. 
+This is web site for watching movies build with Golang, CSS, HTML.
+
 For routing "httprouter" library was used.
+
 To connect to postgresql "lib/pq" and "database/sql" libraries were used.
 
 Films data is downloaded from postgresql database. CSV file for impotring database is provided.
