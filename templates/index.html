@@ -1,0 +1,26 @@
+{{ define "index" }}
+{{ template "header"}}
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row">
+							{{ range $key, $value := . }}
+							<div class="col-4 col-12-medium">
+								<!-- Box -->
+									<section class="box feature">
+										<a href="/films/{{$key}}/" class="image featured"><img src={{index $value "poster_link" }} alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>{{index $value "title"}}</h2>
+												<br>
+												<!-- <button><a href=""><h1 style="color: white;">{{index $value "price"}}$</h1></a></button> -->
+											</header>
+										</div>
+									</section>
+							</div>
+							{{ end }}
+						</div>
+					</div>
+				</div>
+{{ template "footer" }}
+{{ end }}
