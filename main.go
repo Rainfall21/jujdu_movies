@@ -11,8 +11,6 @@ import (
 )
 
 func main() {
-	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/static/", http.StripPrefix("/static", fs))
 	handleFunc()
 }
 
@@ -23,6 +21,7 @@ func handleFunc() {
 	router.GET("/cart/", cart)
 	router.GET("/checkout/", checkout)
 	router.GET("/films/:id", film)
+	router.ServeFiles("/static/*filepath", http.Dir("static"))
 	router.NotFound = http.HandlerFunc(notFound)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
