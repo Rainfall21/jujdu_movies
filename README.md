@@ -4,7 +4,10 @@ For routing "httprouter" library was used.
 
 To connect to postgresql "lib/pq" and "database/sql" libraries were used.
 
-Films data is downloaded from postgresql database. CSV file for impotring database is provided.
+Films data is downloaded from postgresql database. CSV file for importing database is provided.
+
+Some functionality such as registration and authentication and adding movies to the shopping cart may be added in the future.
+
 
 Design is based on HTML5UP designs with some personal adjustments.
 
